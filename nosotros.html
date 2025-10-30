@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Claridad Tributaria</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Inter', 'sans-serif'],
+            'display': ['Manrope', 'sans-serif']
+          },
+          colors: {
+            'azul-profundo': '#092E44',
+            'azul-oscuro-footer': '#041D2A',
+            'turquesa-ejecutivo': '#1F7A8C',
+            'dorado-palido': '#EBCB7A',
+            'blanco-neutro': '#F9FAFB',
+            'gris-tipografico': '#374151',
+            'gris-claro': '#E5E7EB'
+          }
+        }
+      }
+    }
+    </script>
+    <style>
+      /* Estilo para scroll suave al hacer clic en anclas */
+      html {
+          scroll-behavior: smooth;
+      }
+    </style>
+</head>
+<body class="bg-blanco-neutro font-sans">
+
+    <header id="main-header" class="sticky top-0 z-50 w-full bg-azul-profundo/95 backdrop-blur-sm shadow-md transition-all duration-300">
+        <nav class="container mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="font-display font-semibold text-xl tracking-tight text-blanco-neutro hover:text-dorado-palido transition-colors">CLARIDAD TRIBUTARIA</a>
+            <ul class="hidden md:flex items-center space-x-8">
+                <li><a href="index.html" class="text-blanco-neutro/80 hover:text-blanco-neutro transition-colors text-sm font-medium">Home</a></li>
+                <li><a href="nosotros.html" class="text-blanco-neutro font-medium transition-colors text-sm">Nosotros</a></li>
+                <li><a href="servicios.html" class="text-blanco-neutro/80 hover:text-blanco-neutro transition-colors text-sm font-medium">Servicios</a></li>
+                <li><a href="blog.html" class="text-blanco-neutro/80 hover:text-blanco-neutro transition-colors text-sm font-medium">Blog</a></li>
+                <li><a href="recursos.html" class="text-blanco-neutro/80 hover:text-blanco-neutro transition-colors text-sm font-medium">Recursos</a></li>
+                <li><a href="contacto.html" class="text-blanco-neutro/80 hover:text-blanco-neutro transition-colors text-sm font-medium">Contacto</a></li>
+            </ul>
+            <button id="hamburger-btn" class="md:hidden text-blanco-neutro/80 hover:text-blanco-neutro" aria-label="Abrir menú">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-azul-profundo shadow-xl">
+            <ul class="flex flex-col space-y-1 px-6 py-4">
+                 <li><a href="index.html" class="block py-3 text-blanco-neutro/90 hover:text-blanco-neutro transition-colors">Home</a></li>
+                <li><a href="nosotros.html" class="block py-3 text-blanco-neutro font-medium transition-colors">Nosotros</a></li>
+                <li><a href="servicios.html" class="block py-3 text-blanco-neutro/90 hover:text-blanco-neutro transition-colors">Servicios</a></li>
+                <li><a href="blog.html" class="block py-3 text-blanco-neutro/90 hover:text-blanco-neutro transition-colors">Blog</a></li>
+                <li><a href="recursos.html" class="block py-3 text-blanco-neutro/90 hover:text-blanco-neutro transition-colors">Recursos</a></li>
+                <li><a href="contacto.html" class="block py-3 text-blanco-neutro/90 hover:text-blanco-neutro transition-colors">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-nosotros" class="w-full bg-gradient-to-r from-azul-profundo to-turquesa-ejecutivo text-blanco-neutro">
+            <div class="container mx-auto max-w-7xl px-6 py-20 md:py-28 text-center">
+                <h1 class="font-display font-semibold text-4xl md:text-5xl tracking-tight text-blanco-neutro">
+                    Somos Arquitectos de Cumplimiento
+                </h1>
+                <p class="mt-6 font-sans text-lg md:text-xl text-blanco-neutro/90 max-w-3xl mx-auto">
+                    Transformamos la complejidad normativa en decisiones claras y robustas que resisten cualquier fiscalización.
+                </p>
+            </div>
+        </section>
+
+        <section id="filosofia" class="w-full bg-blanco-neutro py-20 md:py-28">
+            <div class="container mx-auto max-w-7xl px-6">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+                    
+                    <div class="lg:col-span-2">
+                        <h2 class="font-display font-semibold text-3xl text-turquesa-ejecutivo mb-4">
+                            Nuestra Filosofía
+                        </h2>
+                        <h3 class="font-display font-semibold text-4xl text-azul-profundo mb-8">
+                            Claridad como activo estratégico.
+                        </h3>
+                        
+                        <div class="space-y-6 font-sans text-lg text-gris-tipografico">
+                            <p>
+                                En un entorno donde las normativas fiscales y financieras cambian constantemente, la incertidumbre es el mayor riesgo operativo.
+                                <strong class="font-medium text-azul-profundo">Claridad Tributaria</strong> no se fundó para ser una consultora tradicional; nacimos para ser arquitectos de cumplimiento.
+                            </p>
+                            <p>
+                                Vemos la norma no como una barrera, sino como los cimientos sobre los cuales se construye una empresa resiliente. Nuestra metodología ("Diagnóstico, Estrategia e Implementación") se enfoca en diseñar sistemas auditables y eficientes.
+                            </p>
+                            <p>
+                                Creemos que el cumplimiento no debe ser un acto reactivo de apagar incendios, sino un pilar proactivo del <strong class="font-medium text-azul-profundo">gobierno corporativo</strong>. 
+                                Proveemos la tranquilidad que solo se obtiene cuando se sabe, con evidencia, que cada decisión resistirá la fiscalización.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <aside class="lg:col-span-1">
+                        <div class="bg-white p-8 rounded-lg shadow-lg border border-gris-claro sticky top-28">
+                            <div class="w-full h-64 bg-gris-claro/50 rounded-md flex items-center justify-center mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gris-tipografico/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                            </div>
+                            <h4 class="font-display font-semibold text-2xl text-azul-profundo mb-1">[Nombre Fundador]</h4>
+                            <p class="font-sans font-medium text-turquesa-ejecutivo text-base mb-4">Fundador & Auditor Líder</p>
+                            <p class="font-sans text-sm text-gris-tipografico mb-5">"La mejor estrategia fiscal es la que se puede defender con total certeza. Mi trabajo es darle a nuestros clientes esa certeza."</p>
+                             <a href="index.html#contacto-form-anchor" 
+                               class="inline-block w-full text-center bg-dorado-palido text-azul-profundo font-sans font-medium py-3 px-6 rounded-md
+                                      hover:bg-opacity-90 transition-all transform hover:-translate-y-0.5
+                                      focus:outline-none focus:ring-2 focus:ring-dorado-palido focus:ring-offset-2 focus:ring-offset-white">
+                                Agendar Evaluación
+                            </a>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer class="w-full bg-azul-profundo text-blanco-neutro pt-16">
+        <div class="container mx-auto max-w-7xl px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-blanco-neutro/10">
+                <div class="space-y-4">
+                     <a href="index.html" class="font-display font-semibold text-xl tracking-tight text-blanco-neutro hover:text-dorado-palido transition-colors">CLARIDAD TRIBUTARIA</a>
+                    <p class="text-sm text-blanco-neutro/80">"Decisiones que resisten fiscalización."</p>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="#" target="_blank" aria-label="LinkedIn" class="text-blanco-neutro/70 hover:text-turquesa-ejecutivo transition-colors"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm0 17h-4.96v-16h4.96v16zm6.32-16h-4.96v16h4.96v-7.58c0-4.66 6.13-4.22 6.13 0v7.58h4.98v-9.15c0-6.9-7.85-6.6-9.87-3.41z"/></svg></a>
+                        <a href="#" target="_blank" aria-label="Instagram" class="text-blanco-neutro/70 hover:text-turquesa-ejecutivo transition-colors"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.071 4.198.19 5.858 1.777 6.033 6.033.058 1.266.07 1.646.07 4.85s-.012 3.584-.071 4.85c-.19 4.198-1.777 5.858-6.033 6.033-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.071c-4.198-.19-5.858-1.777-6.033-6.033-.058-1.266-.07-1.646-.07-4.85s.012-3.584.071-4.85c.19-4.198 1.777-5.858 6.033-6.033 1.266.058 1.646.07 4.85.07zm0 2.137c-3.197 0-3.57.012-4.814.071-3.23.155-4.437 1.488-4.59 4.59-.059 1.244-.071 1.617-.071 4.814s.012 3.57.071 4.814c.153 3.102 1.36 4.437 4.59 4.59 1.244.059 1.617.071 4.814.071s3.57-.012 4.814-.071c3.23-.153 4.437-1.488 4.59-4.59.059-1.244.071-1.617.071-4.814s-.012-3.57-.071-4.814c-.153-3.23-1.488-4.437-4.59-4.59-1.244-.059-1.617-.071-4.814-.071zm0 2.915c-3.702 0-6.75 3.048-6.75 6.75s3.048 6.75 6.75 6.75 6.75-3.048 6.75-6.75-3.048-6.75-6.75-6.75zm0 11c-2.33 0-4.25-1.92-4.25-4.25s1.92-4.25 4.25-4.25 4.25 1.92 4.25 4.25-1.92 4.25-4.25 4.25zM17.25 5c.414 0 .75.336.75.75s-.336.75-.75.75-.75-.336-.75-.75.336-.75.75-.75z"/></svg></a>
+                        <a href="#" target="_blank" aria-label="Facebook" class="text-blanco-neutro/70 hover:text-turquesa-ejecutivo transition-colors"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.162h3.385l-.546 3.469h-2.839v8.385C19.612 23.027 24 18.063 24 12.073z"/></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-display font-semibold text-lg mb-4 text-dorado-palido">Navegación</h4>
+                    <ul class="space-y-3 text-sm">
+                         <li><a href="index.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Home</a></li>
+                        <li><a href="nosotros.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Nosotros</a></li>
+                        <li><a href="servicios.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Servicios</a></li>
+                        <li><a href="blog.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Blog y Artículos</a></li>
+                        <li><a href="recursos.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Recursos Útiles</a></li>
+                        <li><a href="contacto.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-display font-semibold text-lg mb-4 text-dorado-palido">Servicios</h4>
+                    <ul class="space-y-3 text-sm">
+                         <li><a href="servicio-tributario.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Cumplimiento Tributario</a></li>
+                        <li><a href="servicio-ifrs.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Doctrina Financiera IFRS</a></li> 
+                        <li><a href="servicio-auditoria.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Operación & Auditoría</a></li>
+                        <li><a href="servicio-laboral.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Cumplimiento Laboral</a></li>
+                        <li><a href="servicios.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors font-medium pt-2 block">Ver todos los servicios &rarr;</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="font-display font-semibold text-lg mb-4 text-dorado-palido">Contacto</h4>
+                    <ul class="space-y-3 text-sm text-blanco-neutro/80">
+                         <li><p class="font-medium text-blanco-neutro">Email:</p><a href="mailto:contacto@claridadtributaria.cl" class="hover:text-turquesa-ejecutivo transition-colors">contacto@claridadtributaria.cl</a></li>
+                         <li><p class="font-medium text-blanco-neutro">Teléfono:</p><a href="tel:+56222222222" class="hover:text-turquesa-ejecutivo transition-colors">+56 2 222 2222</a></li>
+                        <li><p class="font-medium text-blanco-neutro">Oficina:</p><address class="not-italic">Avenida Principal 1234, Santiago, Chile.</address></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="py-4 text-center md:text-left text-xs bg-azul-oscuro-footer">
+                <div class="container mx-auto max-w-7xl px-6 flex flex-col md:flex-row justify-between items-center text-blanco-neutro/60">
+                    <p>&copy; <span id="current-year"></span> Claridad Tributaria. Todos los derechos reservados.</p>
+                    <div class="mt-2 md:mt-0 space-x-4">
+                        <a href="/legal/privacidad" class="hover:text-blanco-neutro transition-colors">Política de Privacidad</a>
+                        <a href="/legal/terminos" class="hover:text-blanco-neutro transition-colors">Términos de Servicio</a>
+                        <span title="Conformidad WCAG 2.1 AA" class="hidden md:inline-block">| WCAG AA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (hamburgerBtn && mobileMenu) {
+                hamburgerBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+            }
+        });
+    </script>    
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claridad Tributaria - Arquitectura de Cumplimiento Integral</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Inter', 'sans-serif'],
+            'display': ['Manrope', 'sans-serif']
+          },
+          colors: {
+            'azul-profundo': '#092E44',
+            'azul-oscuro-footer': '#041D2A',
+            'turquesa-ejecutivo': '#1F7A8C',
+            'dorado-palido': '#EBCB7A',
+            'blanco-neutro': '#F9FAFB',
+            'gris-tipografico': '#374151',
+            'gris-claro': '#E5E7EB'
+          }
+        }
+      }
+    }
+    </script>
+    <style>
+      /* Estilo para la línea de conexión punteada en desktop */
+      @media (min-width: 768px) {
+        .step-separator {
+          position: absolute;
+          top: 30px; 
+          left: 0; 
+          right: 0;
+          height: 0.5px;
+          border-top: 2px dashed #1F7A8C33;
+          margin-left: 6rem;
+          margin-right: 6rem;
+        }
+      }
+      /* Estilo para scroll suave al hacer clic en anclas */
+      html {
+          scroll-behavior: smooth;
+      }
+    </style>
+</head>
+<body class="bg-blanco-neutro font-sans">
+
+    <header id="main-header" class="sticky top-0 z-50 w-full bg-azul-profundo/95 backdrop-blur-sm shadow-md transition-all duration-300">
+        <nav class="container mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="font-display font-semibold text-xl tracking-tight text-blanco-neutro hover:text-dorado-palido transition-colors">CLARIDAD TRIBUTARIA</a>
+            
+            <ul class="hidden md:flex items-center space-x-8">
+                <li><a href="index.html" class="text-blanco-neutro font-medium transition-colors text-sm">Home</a></li>
+                <li><a href="nosotros.html" class="text-blanco-neutro/80 hover:text-blanco-neutro transition-colors text-sm font-medium">Nosotros</a></li>
+                <li><a href="servicios.html" class="text-blanco-neutro/80 hover:text-blanco-neutro transition-colors text-sm font-medium">Servicios</a></li>
+                <li><a href="blog.html" class="text-blanco-neutro/80 hover:text-blanco-neutro transition-colors text-sm font-medium">Blog</a></li>
+                <li><a href="recursos.html" class="text-blanco-neutro/80 hover:text-blanco-neutro transition-colors text-sm font-medium">Recursos</a></li>
+                <li><a href="contacto.html" class="text-blanco-neutro/80 hover:text-blanco-neutro transition-colors text-sm font-medium">Contacto</a></li>
+            </ul>
+            <button id="hamburger-btn" class="md:hidden text-blanco-neutro/80 hover:text-blanco-neutro" aria-label="Abrir menú">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-azul-profundo shadow-xl">
+            <ul class="flex flex-col space-y-1 px-6 py-4">
+                 <li><a href="index.html" class="block py-3 text-blanco-neutro font-medium transition-colors">Home</a></li>
+                <li><a href="nosotros.html" class="block py-3 text-blanco-neutro/90 hover:text-blanco-neutro transition-colors">Nosotros</a></li>
+                <li><a href="servicios.html" class="block py-3 text-blanco-neutro/90 hover:text-blanco-neutro transition-colors">Servicios</a></li>
+                <li><a href="blog.html" class="block py-3 text-blanco-neutro/90 hover:text-blanco-neutro transition-colors">Blog</a></li>
+                <li><a href="recursos.html" class="block py-3 text-blanco-neutro/90 hover:text-blanco-neutro transition-colors">Recursos</a></li>
+                <li><a href="contacto.html" class="block py-3 text-blanco-neutro/90 hover:text-blanco-neutro transition-colors">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+    
+        <section id="hero" class="relative w-full overflow-hidden bg-gradient-to-r from-azul-profundo to-turquesa-ejecutivo text-blanco-neutro">
+            <div class="relative container mx-auto max-w-7xl px-6 py-24 md:py-32 lg:py-40 z-10">
+                <div class="max-w-3xl text-left">
+                    <h1 class="font-display font-semibold text-4xl md:text-5xl lg:text-6xl tracking-tight text-blanco-neutro">Arquitectura de Cumplimiento Integral</h1>
+                    <p class="mt-6 font-sans text-lg md:text-xl text-blanco-neutro/90 max-w-2xl">Decisiones que resisten fiscalización.</p>
+                    <div class="mt-10">
+                        <a href="#contacto-form-anchor" 
+                           class="inline-block bg-dorado-palido text-azul-profundo font-sans font-medium py-3 px-8 rounded-md
+                                  hover:bg-opacity-90 transition-all transform hover:-translate-y-0.5
+                                  focus:outline-none focus:ring-2 focus:ring-dorado-palido focus:ring-offset-2 focus:ring-offset-azul-profundo">
+                            Agenda tu evaluación
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pilares" class="w-full bg-blanco-neutro py-20 md:py-28">
+            <div class="container mx-auto max-w-7xl px-6">
+                <h2 class="font-display font-semibold text-4xl text-center text-gris-tipografico mb-16">Pilares de Cumplimiento Integral</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-turquesa-ejecutivo mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        <h3 class="font-display font-semibold text-xl text-azul-profundo mb-2">Cumplimiento Tributario</h3>
+                        <p class="font-sans text-gris-tipografico text-base mb-4 flex-grow">Aseguramos la precisión de tus declaraciones y la robustez de tu arquitectura fiscal.</p>
+                        <a href="servicio-tributario.html" class="inline-block font-sans font-medium bg-turquesa-ejecutivo/10 text-turquesa-ejecutivo py-2 px-4 rounded-md hover:bg-turquesa-ejecutivo/20 transition-all text-sm mt-auto">Conocer más &rarr;</a>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-turquesa-ejecutivo mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2H5a2 2 0 00-2 2v2m14 0H5" /></svg>
+                        <h3 class="font-display font-semibold text-xl text-azul-profundo mb-2">Doctrina Financiera IFRS</h3>
+                        <p class="font-sans text-gris-tipografico text-base mb-4 flex-grow">Adaptamos tus estados financieros a las normativas internacionales (IFRS) con precisión.</p>
+                        <a href="servicio-ifrs.html" class="inline-block font-sans font-medium bg-turquesa-ejecutivo/10 text-turquesa-ejecutivo py-2 px-4 rounded-md hover:bg-turquesa-ejecutivo/20 transition-all text-sm mt-auto">Conocer más &rarr;</a>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-turquesa-ejecutivo mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                        <h3 class="font-display font-semibold text-xl text-azul-profundo mb-2">Operación & Auditoría</h3>
+                        <p class="font-sans text-gris-tipografico text-base mb-4 flex-grow">Optimizamos tus procesos internos y preparamos auditorías que generan confianza.</p>
+                        <a href="servicio-auditoria.html" class="inline-block font-sans font-medium bg-turquesa-ejecutivo/10 text-turquesa-ejecutivo py-2 px-4 rounded-md hover:bg-turquesa-ejecutivo/20 transition-all text-sm mt-auto">Conocer más &rarr;</a>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col">
+                       <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-turquesa-ejecutivo mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-11V7a4 4 0 00-8 0v3" /></svg>
+                        <h3 class="font-display font-semibold text-xl text-azul-profundo mb-2">Cumplimiento Laboral</h3>
+                        <p class="font-sans text-gris-tipografico text-base mb-4 flex-grow">Gestionamos la normativa laboral y previsional para blindar tu relación contractual.</p>
+                        <a href="servicio-laboral.html" class="inline-block font-sans font-medium bg-turquesa-ejecutivo/10 text-turquesa-ejecutivo py-2 px-4 rounded-md hover:bg-turquesa-ejecutivo/20 transition-all text-sm mt-auto">Conocer más &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="proceso" class="w-full bg-gris-tipografico/5 py-20 md:py-28">
+             <div class="container mx-auto max-w-7xl px-6">
+                
+                <h2 class="font-display font-semibold text-4xl text-center text-azul-profundo mb-16">
+                    Nuestra Arquitectura de Cumplimiento
+                </h2>
+
+                <div class="relative">
+                    <div class="hidden md:block step-separator"></div>
+                    <div class="relative grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+                        <div class="relative flex flex-col items-start md:items-center text-left md:text-center z-10 bg-gris-tipografico/5 md:bg-transparent p-4 md:p-0 rounded-lg">
+                            <div class="flex items-center justify-center w-16 h-16 rounded-full bg-turquesa-ejecutivo text-blanco-neutro font-display text-2xl font-bold border-4 border-blanco-neutro shadow-lg">1</div>
+                            <h3 class="font-display font-semibold text-2xl text-azul-profundo mt-4 mb-2">Diagnóstico y Levantamiento</h3>
+                            <p class="font-sans text-gris-tipografico text-base">Identificamos los puntos ciegos, las inconsistencias normativas y la arquitectura fiscal actual.</p>
+                        </div>
+                        <div class="relative flex flex-col items-start md:items-center text-left md:text-center z-10 bg-gris-tipografico/5 md:bg-transparent p-4 md:p-0 rounded-lg mt-8 md:mt-0">
+                             <div class="flex items-center justify-center w-16 h-16 rounded-full bg-turquesa-ejecutivo text-blanco-neutro font-display text-2xl font-bold border-4 border-blanco-neutro shadow-lg">2</div>
+                            <h3 class="font-display font-semibold text-2xl text-azul-profundo mt-4 mb-2">Estrategia y Clarificación</h3>
+                            <p class="font-sans text-gris-tipografico text-base">Diseñamos la solución legal y contable, clarificando la norma para una toma de decisiones blindada.</p>
+                        </div>
+                        <div class="relative flex flex-col items-start md:items-center text-left md:text-center z-10 bg-gris-tipografico/5 md:bg-transparent p-4 md:p-0 rounded-lg mt-8 md:mt-0">
+                             <div class="flex items-center justify-center w-16 h-16 rounded-full bg-turquesa-ejecutivo text-blanco-neutro font-display text-2xl font-bold border-4 border-blanco-neutro shadow-lg">3</div>
+                            <h3 class="font-display font-semibold text-2xl text-azul-profundo mt-4 mb-2">Implementación y Control</h3>
+                            <p class="font-sans text-gris-tipografico text-base">Ejecutamos los cambios y proveemos las herramientas de auditoría interna para el control total.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-16">
+                     <a href="nosotros.html" 
+                           class="inline-block border-2 border-turquesa-ejecutivo text-turquesa-ejecutivo font-sans font-medium py-3 px-8 rounded-md
+                                  hover:bg-turquesa-ejecutivo hover:text-blanco-neutro transition-all transform hover:-translate-y-0.5
+                                  focus:outline-none focus:ring-2 focus:ring-turquesa-ejecutivo focus:ring-offset-2 focus:ring-offset-gris-tipografico/5">
+                            Conoce la Metodología Completa
+                        </a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="blog-teaser" class="w-full bg-blanco-neutro py-20 md:py-28">
+            <div class="container mx-auto max-w-7xl px-6">
+                
+                <h2 class="font-display font-semibold text-4xl text-center text-gris-tipografico mb-16">
+                    Artículos Destacados
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden border border-gris-claro hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="h-48 w-full bg-gris-claro/50 flex items-center justify-center" aria-label="Imagen de un gráfico financiero con colores azul y turquesa">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-turquesa-ejecutivo/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4M18 21H6a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2v14a2 2 0 01-2 2z" /></svg>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-sm font-medium text-turquesa-ejecutivo mb-2">ANÁLISIS DE CASO</p>
+                            <h3 class="font-display font-semibold text-xl text-azul-profundo mb-3 leading-snug">Cómo la planificación previsional blindó a una Pyme</h3>
+                            <p class="font-sans text-gris-tipografico text-base mb-4 flex-grow min-h-[4.5rem]">Revisamos la estrategia de balance y capital para optimizar la carga fiscal.</p>
+                            <a href="/blog/planificacion-previsional" class="font-sans font-medium text-turquesa-ejecutivo hover:text-azul-profundo transition-colors text-sm flex items-center mt-auto">Leer más <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.5 12h-11m6.5 6l6-6-6-6" /></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden border border-gris-claro hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="h-48 w-full bg-gris-claro/50 flex items-center justify-center" aria-label="Imagen de un código de leyes o una constitución">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-turquesa-ejecutivo/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253" /></svg>
+                        </div>
+                         <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-sm font-medium text-turquesa-ejecutivo mb-2">NORMATIVA</p>
+                            <h3 class="font-display font-semibold text-xl text-azul-profundo mb-3 leading-snug">Las 5 claves de la Reforma Tributaria que afectará el próximo trimestre</h3>
+                            <p class="font-sans text-gris-tipografico text-base mb-4 flex-grow min-h-[4.5rem]">Un análisis conciso sobre los cambios en la ley que impactan directamente tu estructura de costos.</p>
+                            <a href="/blog/reforma-tributaria" class="font-sans font-medium text-turquesa-ejecutivo hover:text-azul-profundo transition-colors text-sm flex items-center mt-auto">Leer más <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.5 12h-11m6.5 6l6-6-6-6" /></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden border border-gris-claro hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="h-48 w-full bg-gris-claro/50 flex items-center justify-center" aria-label="Imagen de un libro abierto con el logo IFRS">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-turquesa-ejecutivo/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                        </div>
+                         <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-sm font-medium text-turquesa-ejecutivo mb-2">DOCTRINA IFRS</p>
+                            <h3 class="font-display font-semibold text-xl text-azul-profundo mb-3 leading-snug">Diferencias clave: IFRS vs. Normas Locales en la presentación de balances</h3>
+                            <p class="font-sans text-gris-tipografico text-base mb-4 flex-grow min-h-[4.5rem]">Un glosario comparativo esencial para empresas que operan en mercados internacionales.</p>
+                            <a href="/blog/ifrs-vs-local" class="font-sans font-medium text-turquesa-ejecutivo hover:text-azul-profundo transition-colors text-sm flex items-center mt-auto">Leer más <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.5 12h-11m6.5 6l6-6-6-6" /></svg></a>
+                        </div>
+                    </article>
+
+                </div>
+                
+                <div class="text-center mt-16">
+                     <a href="blog.html" 
+                           class="inline-block border-2 border-turquesa-ejecutivo text-turquesa-ejecutivo font-sans font-medium py-3 px-8 rounded-md
+                                  hover:bg-turquesa-ejecutivo hover:text-blanco-neutro transition-all transform hover:-translate-y-0.5
+                                  focus:outline-none focus:ring-2 focus:ring-turquesa-ejecutivo focus:ring-offset-2 focus:ring-offset-blanco-neutro">
+                            Ver Blog Completo
+                        </a>
+                </div>
+
+            </div>
+        </section>
+        
+        <section id="cta-form" class="w-full bg-azul-profundo py-20 md:py-32 text-blanco-neutro">
+            <div class="container mx-auto max-w-7xl px-6">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                    
+                    <div class="lg:sticky lg:top-20">
+                        <h2 class="font-display font-semibold text-4xl lg:text-5xl tracking-tight mb-6">
+                            Transforma la Incertidumbre en Control
+                        </h2>
+                        <p class="font-sans text-lg text-blanco-neutro/80 mb-8 max-w-lg">
+                            Obtén la claridad y la arquitectura fiscal necesaria para tomar decisiones que resistan cualquier fiscalización futura.
+                        </p>
+                         <a href="#contacto-form-anchor" 
+                           class="inline-block bg-dorado-palido text-azul-profundo font-sans font-medium py-3 px-8 rounded-md
+                                  hover:bg-opacity-90 transition-all transform hover:-translate-y-0.5
+                                  focus:outline-none focus:ring-2 focus:ring-dorado-palido focus:ring-offset-2 focus:ring-offset-azul-profundo">
+                            Solicita tu Evaluación Confidencial
+                        </a>
+                    </div>
+
+                    <div id="contacto-form-anchor" class="bg-blanco-neutro p-8 md:p-10 rounded-lg shadow-2xl scroll-mt-20">
+                        <h3 class="font-display font-semibold text-2xl text-azul-profundo mb-6">
+                            Cuéntanos tu Desafío
+                        </h3>
+                        <div id="form-status" class="hidden p-4 rounded-lg mb-4 text-center"></div>
+                        <form id="contact-form">
+                            <input type="text" name="honeypot" id="honeypot" class="hidden" autocomplete="off" tabindex="-1">
+                            <div class="mb-4">
+                                <label for="name" class="block text-sm font-medium text-gris-tipografico mb-1">Nombre Completo</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gris-claro rounded-md focus:ring-turquesa-ejecutivo focus:border-turquesa-ejecutivo text-gris-tipografico placeholder-gray-400" placeholder="Tu nombre o el de tu empresa">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-sm font-medium text-gris-tipografico mb-1">Email Corporativo</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gris-claro rounded-md focus:ring-turquesa-ejecutivo focus:border-turquesa-ejecutivo text-gris-tipografico placeholder-gray-400" placeholder="ejemplo@corporativo.com">
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-sm font-medium text-gris-tipografico mb-1">Teléfono (WhatsApp)</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gris-claro rounded-md focus:ring-turquesa-ejecutivo focus:border-turquesa-ejecutivo text-gris-tipografico placeholder-gray-400" placeholder="+56 9 XXXXXXXX">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium text-gris-tipografico mb-1">Describe tu Desafío</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gris-claro rounded-md focus:ring-turquesa-ejecutivo focus:border-turquesa-ejecutivo text-gris-tipografico placeholder-gray-400" placeholder="Ej: Necesito una auditoría IFRS o blindar mi planificación fiscal anual."></textarea>
+                            </div>
+                            <button type="submit" id="submit-btn" class="w-full bg-turquesa-ejecutivo text-blanco-neutro font-sans font-medium py-3 rounded-md hover:bg-turquesa-ejecutivo/90 transition-all transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-turquesa-ejecutivo focus:ring-offset-2 focus:ring-offset-blanco-neutro">Enviar Solicitud</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer class="w-full bg-azul-profundo text-blanco-neutro pt-16">
+        <div class="container mx-auto max-w-7xl px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-blanco-neutro/10">
+                <div class="space-y-4">
+                     <a href="index.html" class="font-display font-semibold text-xl tracking-tight text-blanco-neutro hover:text-dorado-palido transition-colors">CLARIDAD TRIBUTARIA</a>
+                    <p class="text-sm text-blanco-neutro/80">"Decisiones que resisten fiscalización."</p>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="#" target="_blank" aria-label="LinkedIn" class="text-blanco-neutro/70 hover:text-turquesa-ejecutivo transition-colors"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm0 17h-4.96v-16h4.96v16zm6.32-16h-4.96v16h4.96v-7.58c0-4.66 6.13-4.22 6.13 0v7.58h4.98v-9.15c0-6.9-7.85-6.6-9.87-3.41z"/></svg></a>
+                        <a href="#" target="_blank" aria-label="Instagram" class="text-blanco-neutro/70 hover:text-turquesa-ejecutivo transition-colors"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.071 4.198.19 5.858 1.777 6.033 6.033.058 1.266.07 1.646.07 4.85s-.012 3.584-.071 4.85c-.19 4.198-1.777 5.858-6.033 6.033-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.071c-4.198-.19-5.858-1.777-6.033-6.033-.058-1.266-.07-1.646-.07-4.85s.012-3.584.071-4.85c.19-4.198 1.777-5.858 6.033-6.033 1.266.058 1.646.07 4.85.07zm0 2.137c-3.197 0-3.57.012-4.814.071-3.23.155-4.437 1.488-4.59 4.59-.059 1.244-.071 1.617-.071 4.814s.012 3.57.071 4.814c.153 3.102 1.36 4.437 4.59 4.59 1.244.059 1.617.071 4.814.071s3.57-.012 4.814-.071c3.23-.153 4.437-1.488 4.59-4.59.059-1.244.071-1.617.071-4.814s-.012-3.57-.071-4.814c-.153-3.23-1.488-4.437-4.59-4.59-1.244-.059-1.617-.071-4.814-.071zm0 2.915c-3.702 0-6.75 3.048-6.75 6.75s3.048 6.75 6.75 6.75 6.75-3.048 6.75-6.75-3.048-6.75-6.75-6.75zm0 11c-2.33 0-4.25-1.92-4.25-4.25s1.92-4.25 4.25-4.25 4.25 1.92 4.25 4.25-1.92 4.25-4.25 4.25zM17.25 5c.414 0 .75.336.75.75s-.336.75-.75.75-.75-.336-.75-.75.336-.75.75-.75z"/></svg></a>
+                        <a href="#" target="_blank" aria-label="Facebook" class="text-blanco-neutro/70 hover:text-turquesa-ejecutivo transition-colors"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.162h3.385l-.546 3.469h-2.839v8.385C19.612 23.027 24 18.063 24 12.073z"/></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-display font-semibold text-lg mb-4 text-dorado-palido">Navegación</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Home</a></li>
+                        <li><a href="nosotros.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Nosotros</a></li>
+                        <li><a href="servicios.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Servicios</a></li>
+                        <li><a href="blog.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Blog y Artículos</a></li>
+                        <li><a href="recursos.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Recursos Útiles</a></li>
+                        <li><a href="contacto.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-display font-semibold text-lg mb-4 text-dorado-palido">Servicios</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="servicio-tributario.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Cumplimiento Tributario</a></li>
+                        <li><a href="servicio-ifrs.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Doctrina Financiera IFRS</a></li> 
+                        <li><a href="servicio-auditoria.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Operación & Auditoría</a></li>
+                        <li><a href="servicio-laboral.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Cumplimiento Laboral</a></li>
+                        <li><a href="servicios.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors font-medium pt-2 block">Ver todos los servicios &rarr;</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-display font-semibold text-lg mb-4 text-dorado-palido">Contacto</h4>
+                    <ul class="space-y-3 text-sm text-blanco-neutro/80">
+                         <li><p class="font-medium text-blanco-neutro">Email:</p><a href="mailto:contacto@claridadtributaria.cl" class="hover:text-turquesa-ejecutivo transition-colors">contacto@claridadtributaria.cl</a></li>
+                         <li><p class="font-medium text-blanco-neutro">Teléfono:</p><a href="tel:+56222222222" class="hover:text-turquesa-ejecutivo transition-colors">+56 2 222 2222</a></li>
+                        <li><p class="font-medium text-blanco-neutro">Oficina:</p><address class="not-italic">Avenida Principal 1234, Santiago, Chile.</address></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="py-4 text-center md:text-left text-xs bg-azul-oscuro-footer">
+                <div class="container mx-auto max-w-7xl px-6 flex flex-col md:flex-row justify-between items-center text-blanco-neutro/60">
+                    <p>&copy; <span id="current-year"></span> Claridad Tributaria. Todos los derechos reservados.</p>
+                    <div class="mt-2 md:mt-0 space-x-4">
+                        <a href="/legal/privacidad" class="hover:text-blanco-neutro transition-colors">Política de Privacidad</a>
+                        <a href="/legal/terminos" class="hover:text-blanco-neutro transition-colors">Términos de Servicio</a>
+                        <span title="Conformidad WCAG 2.1 AA" class="hidden md:inline-block">| WCAG AA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const contactForm = document.getElementById('contact-form');
+            const formStatus = document.getElementById('form-status');
+            const submitBtn = document.getElementById('submit-btn');
+
+            if (hamburgerBtn && mobileMenu) {
+                hamburgerBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+            }
+
+            if (contactForm && formStatus && submitBtn) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    const honeypot = document.getElementById('honeypot').value;
+                    if (honeypot.length > 0) { displayMessage('Éxito: Solicitud enviada.', 'success'); this.reset(); return; }
+                    submitBtn.textContent = 'Enviando...'; submitBtn.disabled = true;
+                    const formData = new FormData(this); const data = Object.fromEntries(formData.entries());
+                    const payload = { nombre: data.name, email: data.email, telefono: data.phone, mensaje: data.message, website: data.honeypot };
+                    try {
+                        const response = await fetch('https://claridadtributariabackend-production.up.railway.app/api/contactos/', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(payload) });
+                        const responseData = await response.json();
+                        if (response.ok) { displayMessage(`Éxito: ${responseData.message || 'Solicitud enviada.'}`, 'success'); this.reset(); console.log('GA4: form_home_submit'); } 
+                        else { const errMsg = responseData.detail || responseData.error || 'Error servidor.'; displayMessage(`Error: ${errMsg}`, 'error'); }
+                    } catch (error) { displayMessage('Error de red.', 'error'); } 
+                    finally { submitBtn.textContent = 'Enviar Solicitud'; submitBtn.disabled = false; }
+                });
+            }
+            function displayMessage(message, type) { 
+                formStatus.textContent = message; 
+                formStatus.className = 'p-4 rounded-lg mb-4 text-center '; // Reset classes
+                if (type === 'success') formStatus.classList.add('bg-green-100', 'text-azul-profundo');
+                else if (type === 'error') formStatus.classList.add('bg-red-100', 'text-azul-profundo');
+                formStatus.classList.remove('hidden'); // Ensure it's visible
+             }
+        });
+    </script>    
+</body>
+</html>
