@@ -45,7 +45,7 @@
         <nav class="container mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
             
             <a href="index.html" class="block" aria-label="Ir al inicio de Claridad Tributaria">
-                <img src="assets/img/logo-dark.png" alt="Logo Claridad Tributaria" class="h-10 w-auto">
+                <img src="assets/img/logo-dark.png" alt="Logo Claridad Tributaria" class="h-12 w-auto">
             </a>
             <ul class="hidden md:flex items-center space-x-8">
                 <li><a href="index.html" class="text-blanco-neutro font-medium transition-colors text-sm">Home</a></li>
@@ -92,15 +92,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="hidden md:flex justify-center items-center opacity-20">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-64 h-64" fill="none" viewBox="0 0 40 40">
-                        <path fill="#EBCB7A" d="M14.129 35.393c-2.582-1.335-4.921-3.165-6.899-5.38C5.252 27.798 3.668 25.23 2.57 22.42 1.47 19.61 0.893 16.61 0.893 13.52c0-2.5.455-4.85 1.365-7.05 0.91-2.2 2.235-4.168 3.975-5.904L7.568 1.901C6.012 3.457 4.825 5.257 4.007 7.301 3.189 9.345 2.78 11.45 2.78 13.615c0 2.81.542 5.53 1.626 8.16 1.084 2.63 2.568 5.015 4.452 7.155 1.884 2.14 4.104 3.91 6.66 5.21l-1.39 1.253Z"></path>
-                        <path fill="#1F7A8C" d="M22.58 39.107c-2.76-1.1-5.328-2.694-7.572-4.672-2.244-1.978-4.118-4.292-5.538-6.875C8.05 24.977 7.12 22.185 6.74 19.295c-0.38-2.89-0.195-5.815 0.555-8.685 0.75-2.87 2.04-5.55 3.87-7.94L12.554 3.923C10.934 6.008 9.794 8.413 9.194 11.028c-0.6 2.615-0.775 5.285-0.525 7.98 0.35 2.695 1.17 5.23 2.46 7.54 1.29 2.31 2.955 4.36 5.05 6.065 2.095 1.705 4.495 3.005 7.11 3.825l-0.77 2.677Z"></path>
-                        <path fill="#1F7A8C" d="M37.74 33.766c-1.285-2.556-3-4.836-5.06-6.756-2.06-1.92-4.43-3.42-7-4.43-2.57-1.01-5.26-1.525-7.96-1.525-2.5 0-4.85 0.455-7.05 1.365-2.2 0.91-4.168 2.235-5.904 3.975L3.431 25.06C5.355 23.136 7.568 21.58 10.07 20.39c2.5-1.19 5.12-1.795 7.86-1.795 2.74 0 5.4 0.505 7.98 1.495 2.58 0.99 4.92 2.45 6.975 4.38 2.055 1.93 3.75 4.23 5.025 6.825l-0.17 2.486Z"></path>
-                        <path fill="#EBCB7A" d="M39.107 27.42C37.283 24.405 34.903 21.845 32.093 19.86c-2.81-1.985-5.94-3.38-9.225-4.07L23.498 13.12c3.735 0.79 7.215 2.365 10.325 4.61 3.11 2.245 5.725 5.08 7.735 8.39l-2.45 1.3Z"></path>
-                    </svg>
                 </div>
-            </div>
         </section>
 
         <section id="servicios-home" class="w-full bg-white py-20 md:py-28">
@@ -158,7 +150,6 @@
                 </div>
             </div>
         </section>
-
         <section id="contacto-form-anchor" class="w-full bg-white py-20 md:py-28 scroll-mt-20">
             <div class="container mx-auto max-w-7xl px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -193,6 +184,11 @@
                             <div class="mb-4">
                                 <label for="email" class="block text-sm font-medium text-gris-tipografico mb-1">Email Corporativo</label>
                                 <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gris-claro rounded-md focus:ring-turquesa-ejecutivo focus:border-turquesa-ejecutivo text-gris-tipografico placeholder-gray-400" placeholder="ejemplo@corporativo.com">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="phone" class="block text-sm font-medium text-gris-tipografico mb-1">Teléfono (WhatsApp)</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gris-claro rounded-md focus:ring-turquesa-ejecutivo focus:border-turquesa-ejecutivo text-gris-tipografico placeholder-gray-400" placeholder="+56 9 XXXXXXXX">
                             </div>
                             <div class="mb-6">
                                 <label for="message" class="block text-sm font-medium text-gris-tipografico mb-1">Describe brevemente tu desafío</label>
@@ -285,6 +281,7 @@
                     if (honeypot.length > 0) { displayMessage('Éxito: Solicitud enviada.', 'success'); this.reset(); return; }
                     submitBtn.textContent = 'Enviando...'; submitBtn.disabled = true;
                     const formData = new FormData(this); const data = Object.fromEntries(formData.entries());
+                    
                     const payload = { nombre: data.name, email: data.email, telefono: data.phone, mensaje: data.message, website: data.honeypot };
                     try {
                         const response = await fetch('https://claridadtributariabackend-production.up.railway.app/api/contactos/', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(payload) });
