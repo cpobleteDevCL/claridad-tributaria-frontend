@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- KRONOS: INICIO METADATOS SEO -->
+    <title>5 señales de alarma en auditoría – Claridad Tributaria</title>
+    <meta name="description" content="Un auditor no busca orden: busca evidencia. Revisa 5 señales de alarma en tu contabilidad y cómo corregirlas antes de una auditoría o fiscalización.">
+    <meta name="keywords" content="auditoría contable, control interno, pruebas de auditoría, asientos manuales, segregación de funciones, fiscalización SII">
+    <meta property="og:title" content="5 señales de alarma en auditoría – Claridad Tributaria">
+    <meta property="og:description" content="Un auditor no busca orden: busca evidencia. Revisa 5 señales de alarma en tu contabilidad y cómo corregirlas.">
+    <meta property="og:image" content="https://claridadtributaria.cl/assets/img/og-blog-auditoria.png"> 
+    <meta property="og:url" content="https://claridadtributaria.cl/blog/contabilidad-ordenada-auditoria-senales-de-alarma">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- KRONOS: FIN METADATOS SEO -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Inter', 'sans-serif'],
+            'display': ['Manrope', 'sans-serif']
+          },
+          colors: {
+            'azul-profundo': '#092E44',
+            'azul-oscuro-footer': '#041D2A',
+            'turquesa-ejecutivo': '#1F7A8C',
+            'dorado-palido': '#EBCB7A',
+            'blanco-neutro': '#F9FAFB',
+            'gris-tipografico': '#374151',
+            'gris-claro': '#E5E7EB'
+          }
+        }
+      }
+    }
+    </script>
+    <style>
+      /* Estilo para scroll suave al hacer clic en anclas */
+      html {
+          scroll-behavior: smooth;
+      }
+      .whatsapp-fab {
+          position: fixed;
+          bottom: 2rem;
+          right: 2rem;
+          background-color: #25D366;
+          color: white;
+          padding: 0.75rem;
+          border-radius: 50%;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          z-index: 100;
+          transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      }
+      .whatsapp-fab:hover {
+          transform: scale(1.1);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+      
+      /* KRONOS: INICIO ESTILOS DE ARTÍCULO */
+      .article-content > h2 {
+        @apply font-display text-2xl md:text-3xl font-semibold text-azul-profundo mt-10 mb-5;
+      }
+      .article-content > p {
+        @apply font-sans text-base text-gris-tipografico leading-relaxed mb-6; /* interlineado 1.6rem (aprox) */
+      }
+      .article-content > ul {
+        @apply list-disc list-outside pl-6 mb-6 space-y-2 text-gris-tipografico;
+      }
+      .article-content > ol {
+        @apply list-decimal list-outside pl-6 mb-6 space-y-2 text-gris-tipografico;
+      }
+      .article-content > li {
+        @apply leading-relaxed;
+      }
+      .article-content > blockquote {
+        @apply font-sans text-lg italic text-azul-profundo border-l-4 border-dorado-palido pl-6 my-8;
+      }
+      /* KRONOS: FIN ESTILOS DE ARTÍCULO */
+
+    </style>
+</head>
+<body class="bg-blanco-neutro font-sans">
+
+    <!-- KRONOS: RUTAS ABSOLUTAS (/) USADAS EN TODA LA PLANTILLA -->
+    <header id="main-header" class="sticky top-0 z-50 w-full bg-azul-profundo/95 backdrop-blur-sm shadow-md transition-all duration-300">
+        <nav class="container mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+            
+            <a href="/index.html" class="block" aria-label="Ir al inicio de Claridad Tributaria">
+                <img src="/assets/img/logo-ct-transparente-claro.png" alt="Logo Claridad Tributaria" class="h-40 w-auto -my-14">
+            </a>
+
+            <ul class="hidden md:flex items-center space-x-8">
+                <li><a href="/index.html" class="text-blanco-neutro/80 hover:text-blanco-neutro transition-colors text-sm font-medium">Home</a></li>
+                <li><a href="/nosotros.html" class="text-blanco-neutro/80 hover:text-blanco-neutro transition-colors text-sm font-medium">Nosotros</a></li>
+                <li><a href="/servicios.html" class="text-blanco-neutro/80 hover:text-blanco-neutro transition-colors text-sm font-medium">Servicios</a></li>
+                <li><a href="/blog.html" class="text-blanco-neutro font-medium transition-colors text-sm">Blog</a></li>
+                <li><a href="/recursos.html" class="text-blanco-neutro/80 hover:text-blanco-neutro transition-colors text-sm font-medium">Recursos</a></li>
+                <li><a href="/contacto.html" class="text-blanco-neutro/80 hover:text-blanco-neutro transition-colors text-sm font-medium">Contacto</a></li>
+            </ul>
+            <button id="hamburger-btn" class="md:hidden text-blanco-neutro/80 hover:text-blanco-neutro" aria-label="Abrir menú">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-azul-profundo shadow-xl">
+            <ul class="flex flex-col space-y-1 px-6 py-4">
+                 <li><a href="/index.html" class="block py-3 text-blanco-neutro/90 hover:text-blanco-neutro transition-colors">Home</a></li>
+                <li><a href="/nosotros.html" class="block py-3 text-blanco-neutro/90 hover:text-blanco-neutro transition-colors">Nosotros</a></li>
+                <li><a href="/servicios.html" class="block py-3 text-blanco-neutro/90 hover:text-blanco-neutro transition-colors">Servicios</a></li>
+                <li><a href="/blog.html" class="block py-3 text-blanco-neutro font-medium transition-colors">Blog</a></li>
+                <li><a href="/recursos.html" class="block py-3 text-blanco-neutro/90 hover:text-blanco-neutro transition-colors">Recursos</a></li>
+                <li><a href="/contacto.html" class="block py-3 text-blanco-neutro/90 hover:text-blanco-neutro transition-colors">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+    
+        <section id="article-hero" class="w-full h-[40vh] md:h-[50vh] relative flex items-center justify-center text-center text-blanco-neutro" style="background-color: #092E44;">
+            <!-- Placeholder de Imagen -->
+            <div class="absolute inset-0 z-0 opacity-20 flex items-center justify-center" aria-label="Auditoría detectando debilidades detrás de contabilidad aparentemente ordenada">
+                 <svg class="w-1/3 h-1/3 text-dorado-palido/50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="0.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 17l-6-6 6-6" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 17l-6-6 6-6" class="opacity-60"/>
+                </svg>
+            </div>
+            
+            <div class="relative z-10 container mx-auto max-w-4xl px-6 py-20 md:py-28">
+                <!-- Categoría -->
+                <p class="text-base font-medium text-dorado-palido mb-4 uppercase tracking-widest">Operación & Auditoría</p>
+                
+                <!-- H1 del Artículo -->
+                <h1 class="font-display font-semibold text-3xl md:text-5xl tracking-tight text-blanco-neutro">
+                    Tu contabilidad parece ordenada… hasta que llega la auditoría: 5 señales de alarma
+                </h1>
+                
+                <!-- Subtítulo -->
+                <p class="mt-6 font-sans text-lg md:text-xl text-blanco-neutro/90 max-w-3xl mx-auto">
+                    Un auditor no busca si el número cuadra: busca por qué cuadra. Evidencia, trazabilidad y control real — eso es lo que resiste.
+                </p>
+            </div>
+        </section>
+
+
+        <section id="article-body" class="w-full bg-blanco-neutro py-20 md:py-28">
+            <div class="container mx-auto max-w-7xl px-6">
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+
+                    <!-- Columna Principal del Artículo -->
+                    <div class="md:col-span-2">
+                        <!-- Metadatos (Autor, Fecha, Tiempo) -->
+                        <div class="flex flex-wrap items-center text-sm text-gris-tipografico/80 mb-8 pb-8 border-b border-gris-claro">
+                            <div class="flex items-center mr-6 mb-2 md:mb-0">
+                                <svg class="w-4 h-4 mr-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-5.5-2.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM10 12a5.99 5.99 0 00-4.793 2.39A6.483 6.483 0 0010 16.5a6.483 6.483 0 004.793-2.11A5.99 5.99 0 0010 12z" clip-rule="evenodd" /></svg>
+                                <span>Por <strong>Cristian Poblete A.</strong></span>
+                            </div>
+                            <div class="flex items-center mr-6 mb-2 md:mb-0">
+                                <svg class="w-4 h-4 mr-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zM4.5 8.25v7a1.25 1.25 0 001.25 1.25h9.5a1.25 1.25 0 001.25-1.25v-7h-12z" clip-rule="evenodd" /></svg>
+                                <span>Noviembre 2025</span>
+                            </div>
+                            <div class="flex items-center mb-2 md:mb-0">
+                                <svg class="w-4 h-4 mr-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5H10.5V5z" clip-rule="evenodd" /></svg>
+                                <span>9 min lectura</span>
+                            </div>
+                        </div>
+
+                        <!-- Contenedor del contenido (para estilos CSS) -->
+                        <div class="article-content max-w-none">
+                            
+                            <p>El balance cierra. El IVA está al día. La conciliación bancaria calza al centavo. Tranquilidad… ¿real?</p>
+                            <p>La contabilidad puede lucir ordenada y, aun así, carecer de evidencia. Cuando llega la auditoría —interna, externa o una fiscalización del SII— la pregunta ya no es si cuadra, sino por qué cuadra. Sin trazabilidad ni controles demostrables, el “orden” se desarma.</p>
+                            
+                            <blockquote>Idea fuerza: Un auditor no audita rutinas; audita evidencia.</blockquote>
+
+                            <h2>1) Documentación sin respaldo (el asiento huérfano)</h2>
+                            <p><strong>Señal:</strong> ajustes manuales o provisiones con glosas genéricas (“regularización”, “provisión”); no existe papel de trabajo.</p>
+                            <p><strong>Por qué es crítico:</strong> Lo que no está documentado, no existe. Sin cálculo, contrato o memo, el auditor no puede validar existencia, integridad ni valuación.</p>
+                            <p><strong>Ejemplo breve:</strong> provisión de incobrables “por experiencia” sin matriz ECL ni aging → ajuste material.</p>
+                            <!-- KRONOS: INICIO ACTUALIZACIÓN VISUAL (AMPOLLETA) -->
+                            <blockquote class="text-base">💡 <strong>Tip de Cumplimiento:</strong> Cero tolerancia a asientos manuales sin respaldo adjunto (cálculo + fuente + aprobación).</blockquote>
+                            <!-- KRONOS: FIN ACTUALIZACIÓN VISUAL -->
+
+                            <h2>2) Controles sin evidencia (el “sí, lo hacemos” verbal)</h2>
+                            <p><strong>Señal:</strong> el equipo asegura aplicar 3-Way Match o revisión de nómina, pero no deja huella (firma, check ERP, correo).</p>
+                            <p><strong>Por qué es crítico:</strong> un control sin rastro es un control inexistente. Auditoría de controles (TOC) lo invalida.</p>
+                            <p><strong>Ejemplo breve:</strong> nómina aprobada “de vista” por el gerente; sin evidencia → control inválido.</p>
+                            <!-- KRONOS: INICIO ACTUALIZACIÓN VISUAL (AMPOLLETA) -->
+                            <blockquote class="text-base">💡 <strong>Tip de Cumplimiento:</strong> diseñar cada control para que deje rastro (log, firma digital, ticket de aprobación).</blockquote>
+                            <!-- KRONOS: FIN ACTUALIZACIÓN VISUAL -->
+
+                            <h2>3) Cierre mensual superficial (el “solo para cuadrar”)</h2>
+                            <p><strong>Señal:</strong> no hay análisis de variaciones ni aging de cuentas “puente” (anticipos, gastos por identificar, fondos por rendir).</p>
+                            <p><strong>Por qué es crítico:</strong> la primera prueba del auditor es analítica. Sin explicación de desvíos, presume error o mala clasificación.</p>
+                            <p><strong>Ejemplo breve:</strong> anticipos a proveedores inmóviles por 12 meses → gastos no reconocidos y pérdidas no provisionadas.</p>
+                            <!-- KRONOS: INICIO ACTUALIZACIÓN VISUAL (AMPOLLETA) -->
+                            <blockquote class="text-base">💡 <strong>Tip de Cumplimiento:</strong> Paquete de Cierre Mensual: balances + variaciones explicadas (>10%) + aging y composición de cuentas clave.</blockquote>
+                            <!-- KRONOS: FIN ACTUALIZACIÓN VISUAL -->
+
+                            <h2>4) Ajustes manuales excesivos (la caja negra del GL)</h2>
+                            <p><strong>Señal:</strong> alto volumen de asientos manuales al cierre, ingresados por usuarios de alto nivel; bypass a módulos operativos.</p>
+                            <p><strong>Por qué es crítico:</strong> riesgo mayor según NIA 240 (fraude). Se usa para “maquillar” cifras o esconder desvíos.</p>
+                            <p><strong>Ejemplo breve:</strong> discrepancia inventario/kardex “corregida” con ajuste GL sin investigar causa raíz → hallazgo severo.</p>
+                            <!-- KRONOS: INICIO ACTUALIZACIÓN VISUAL (AMPOLLETA) -->
+                            <blockquote class="text-base">💡 <strong>Tip de Cumplimiento:</strong> restringir permisos de asientos manuales; formulario de “Solicitud de Ajuste Manual” con respaldo y aprobación gerencial.</blockquote>
+                            <!-- KRONOS: FIN ACTUALIZACIÓN VISUAL -->
+
+                            <h2>5) Falta de segregación de funciones (el hombre/mujer orquesta)</h2>
+                            <p><strong>Señal:</strong> una sola persona crea proveedor, registra factura y prepara pago; o contrata, calcula sueldo y carga nómina.</p>
+                            <p><strong>Por qué es crítico:</strong> sin SoD (COSO) sube el riesgo de error y fraude; la auditoría lo califica como debilidad de control.</p>
+                            <p><strong>Ejemplo breve:</strong> tesorería sin revisor independiente; cheques a nombre propio ocultos con conciliaciones “cuadradas”.</p>
+                            <!-- KRONOS: INICIO ACTUALIZACIÓN VISUAL (AMPOLLETA) -->
+                            <blockquote class="text-base">💡 <strong>Tip de Cumplimiento:</strong> si no puedes segregar, compensa: el dueño recibe cartola bancaria directa y confronta egresos vs. facturas aprobadas cada día.</blockquote>
+                            <!-- KRONOS: FIN ACTUALIZACIÓN VISUAL -->
+                            
+                            <h2>Cierre — Del orden aparente al control defendible</h2>
+                            <p>Una contabilidad “ordenada” sin evidencia es ficción. Estar audit-ready no es ordenar papeles al final: es operar cada día con trazabilidad, autorizaciones y controles que dejan rastro.</p>
+                            <p>La auditoría preventiva no es un costo, es tu seguro de continuidad.</p>
+                            
+                            <!-- Cierre / CTA Editorial -->
+                            <p class="mt-12">En Claridad Tributaria diseñamos operación y controles que resisten auditoría.</p>
+                            
+                            <a href="/contacto.html" id="blog-cta-bottom" class="inline-block mt-6 bg-dorado-palido text-azul-profundo font-display font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-opacity-90 transition-all transform hover:-translate-y-0.5">
+                                Solicitar evaluación operativa &rarr;
+                            </a>
+
+                        </div>
+
+                        <!-- KRONOS: INICIO ACTUALIZACIÓN (SECCIÓN ARTÍCULOS RELACIONADOS) -->
+                        <div class="mt-16 pt-10 border-t border-gris-claro">
+                            <h2 class="font-display font-semibold text-3xl text-azul-profundo mb-8">Lee también</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                
+                                <!-- Art 6 (Cumplimiento Ágil) -->
+                                <a href="/blog/como-sistematizar-tu-cumplimiento-sin-perder-la-esencia.html" class="block bg-white p-6 rounded-lg shadow-sm border border-gris-claro hover:shadow-md transition-shadow">
+                                    <p class="text-sm font-medium text-dorado-palido mb-2 uppercase tracking-wide">Operación & Auditoría</p>
+                                    <h3 class="font-display font-semibold text-lg text-azul-profundo leading-snug">Cómo sistematizar tu cumplimiento sin perder la esencia</h3>
+                                </a>
+
+                                <!-- Art 5 (Tributario) -->
+                                <a href="/blog/coste-oculto-arquitectura-tributaria.html" class="block bg-white p-6 rounded-lg shadow-sm border border-gris-claro hover:shadow-md transition-shadow">
+                                    <p class="text-sm font-medium text-dorado-palido mb-2 uppercase tracking-wide">Cumplimiento Tributario</p>
+                                    <h3 class="font-display font-semibold text-lg text-azul-profundo leading-snug">El coste oculto de ignorar la arquitectura tributaria</h3>
+                                </a>
+
+                                <!-- Art 4 (Laboral) -->
+                                <a href="/blog/cuando-el-cumplimiento-laboral-se-convierte-en-un-pasivo.html" class="block bg-white p-6 rounded-lg shadow-sm border border-gris-claro hover:shadow-md transition-shadow">
+                                    <p class="text-sm font-medium text-dorado-palido mb-2 uppercase tracking-wide">Cumplimiento Laboral</p>
+                                    <h3 class="font-display font-semibold text-lg text-azul-profundo leading-snug">Cuando el cumplimiento laboral se vuelve un pasivo</h3>
+                                </a>
+                                
+                                <!-- Art 1 (SII) -->
+                                <a href="/blog/el-paradigma-de-la-sorpresa-sii-fiscaliza-cumplidores.html" class="block bg-white p-6 rounded-lg shadow-sm border border-gris-claro hover:shadow-md transition-shadow">
+                                    <p class="text-sm font-medium text-dorado-palido mb-2 uppercase tracking-wide">Cumplimiento Tributario</p>
+                                    <h3 class="font-display font-semibold text-lg text-azul-profundo leading-snug">El SII fiscaliza incluso a quienes “cumplen”</h3>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- KRONOS: FIN ACTUALIZACIÓN -->
+
+                    </div>
+
+                    <!-- Columna Lateral (Sidebar) -->
+                    <aside class="md:col-span-1">
+                        <div class="sticky top-28 bg-white p-8 rounded-lg shadow-lg border border-gris-claro">
+                            <h3 class="font-display font-semibold text-2xl text-azul-profundo mb-5">¿Tu operación es auditable?</h3>
+                            <p class="font-sans text-gris-tipografico mb-6">Un control interno robusto no es burocracia, es la garantía de que tu operación es eficiente y está protegida contra errores y fraudes.</p>
+                            <a href="/contacto.html" id="blog-cta-sidebar" class="w-full text-center block bg-turquesa-ejecutivo text-blanco-neutro font-display font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-azul-profundo transition-colors">
+                                Solicitar Evaluación Operativa
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- KRONOS: RUTAS ABSOLUTAS (/) USADAS EN TODA LA PLANTILLA -->
+    <footer class="w-full bg-azul-profundo text-blanco-neutro pt-16">
+        <div class="container mx-auto max-w-7xl px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-blanco-neutro/10">
+                <div class="space-y-4">
+                     
+                     <a href="/index.html" class="block" aria-label="Ir al inicio de Claridad Tributaria">
+                        <img src="/assets/img/logo-ct-transparente-claro.png" alt="Logo Claridad Tributaria" class="h-32 w-auto">
+                    </a>
+
+                    <p class="text-sm text-blanco-neutro/80">"Decisiones que resisten fiscalización."</p>
+                    
+                    <div class="flex space-x-4 pt-2">
+                        <a href="https://www.linkedin.com/company/claridad-tributaria-spa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-blanco-neutro/70 hover:text-turquesa-ejecutivo transition-colors"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm0 17h-4.96v-16h4.96v16zm6.32-16h-4.96v16h4.96v-7.58c0-4.66 6.13-4.22 6.13 0v7.58h4.98v-9.15c0-6.9-7.85-6.6-9.87-3.41z"/></svg></a>
+                        <a href="https://www.instagram.com/claridad.tributaria" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-blanco-neutro/70 hover:text-turquesa-ejecutivo transition-colors"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.071 4.198.19 5.858 1.777 6.033 6.033.058 1.266.07 1.646.07 4.85s-.012 3.584-.071 4.85c-.19 4.198-1.777 5.858-6.033 6.033-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.071c-4.198-.19-5.858-1.777-6.033-6.033-.058-1.266-.07-1.646-.07-4.85s.012-3.584.071-4.85c.19-4.198 1.777 5.858 6.033 6.033 1.266.058 1.646.07 4.85.07zm0 2.137c-3.197 0-3.57.012-4.814.071-3.23.155-4.437 1.488-4.59 4.59-.059 1.244-.071 1.617-.071 4.814s.012 3.57.071 4.814c.153 3.102 1.36 4.437 4.59 4.59 1.244.059 1.617.071 4.814.071s3.57-.012 4.814-.071c3.23-.153 4.437-1.488 4.59-4.59.059-1.244.071 1.617.071-4.814s-.012-3.57-.071-4.814c-.153-3.23-1.488-4.437-4.59-4.59-1.244-.059-1.617.071-4.814-.071zm0 2.915c-3.702 0-6.75 3.048-6.75 6.75s3.048 6.75 6.75 6.75 6.75-3.048 6.75-6.75-3.048-6.75-6.75-6.75zm0 11c-2.33 0-4.25-1.92-4.25-4.25s1.92-4.25 4.25-4.25 4.25 1.92 4.25 4.25-1.92 4.25-4.25 4.25zM17.25 5c.414 0 .75.336.75.75s-.336.75-.75.75-.75-.336-.75-.75.336-.75.75.75z"/></svg></a>
+                        <a href="https://www.facebook.com/people/Claridad-Tributaria/61582074051442/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-blanco-neutro/70 hover:text-turquesa-ejecutivo transition-colors"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.162h3.385l-.546 3.469h-2.839v8.385C19.612 23.027 24 18.063 24 12.073z"/></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-display font-semibold text-lg mb-4 text-dorado-palido">Navegación</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/index.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Home</a></li>
+                        <li><a href="/nosotros.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Nosotros</a></li>
+                        <li><a href="/servicios.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Servicios</a></li>
+                        <li><a href="/blog.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Blog y Artículos</a></li>
+                        <li><a href="/recursos.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Recursos Útiles</a></li>
+                        <li><a href="/contacto.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-display font-semibold text-lg mb-4 text-dorado-palido">Servicios</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/servicio-tributario.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Cumplimiento Tributario</a></li>
+                        <li><a href="/servicio-ifrs.html" class="text-blanco-neutro/88 hover:text-turquesa-ejecutivo transition-colors">Doctrina Financiera IFRS</a></li> 
+                        <li><a href="/servicio-auditoria.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Operación & Auditoría</a></li>
+                        <li><a href="/servicio-laboral.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors">Cumplimiento Laboral</a></li>
+                        <li><a href="/servicios.html" class="text-blanco-neutro/80 hover:text-turquesa-ejecutivo transition-colors font-medium pt-2 block">Ver todos los servicios &rarr;</a></li>
+                    </ul>
+                </div>
+                 
+                 <div>
+                    <h4 class="font-display font-semibold text-lg mb-4 text-dorado-palido">Contacto</h4>
+                    <ul class="space-y-3 text-sm text-blanco-neutro/80">
+                         <li><p class="font-medium text-blanco-neutro">Email:</p><a href="mailto:contacto@claridadtributaria.cl" class="hover:text-turquesa-ejecutivo transition-colors">contacto@claridadtaria.cl</a></li>
+                         <li><p class="font-medium text-blanco-neutro">Teléfono:</p><a href="tel:+56977396864" class="hover:text-turquesa-ejecutivo transition-colors">+56 9 7739 6864</a></li>
+                        <li><p class="font-medium text-blanco-neutro">Oficina:</p><address class="not-italic">Apoquindo 3000, Las Condes, Santiago, Chile.</address></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="py-4 text-center md:text-left text-xs bg-azul-oscuro-footer">
+                <div class="container mx-auto max-w-7xl px-6 flex flex-col md:flex-row justify-between items-center text-blanco-neutro/60">
+                    <p>&copy; <span id="current-year"></span> Claridad Tributaria. Todos los derechos reservados.</p>
+                    <div class="mt-2 md:mt-0 space-x-4">
+                        <a href="/legal/privacidad" class="hover:text-blanco-neutro transition-colors">Política de Privacidad</a>
+                        <a href="/legal/terminos" class="hover:text-blanco-neutro transition-colors">Términos de Servicio</a>
+                        <span title="Conformidad WCAG 2.1 AA" class="hidden md:inline-block">| WCAG AA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/56977396864" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Contactar por WhatsApp">
+        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19.11 4.93C17 2.81 14.57 1.7 12 1.7c-5.45 0-9.89 4.44-9.89 9.89 0 1.77.47 3.45 1.34 4.9L2 22l6.29-1.65c1.41.8 3.02 1.24 4.71 1.24h.01c5.45 0 9.89-4.44 9.89-9.89 0-2.57-1.11-4.99-2.92-6.81zM12 20.38c-1.5 0-2.91-.4-4.14-1.12l-.3-.18-3.07.8.82-3.01-.2-.31c-.8-1.27-1.21-2.73-1.21-4.24 0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42 1.56 1.56 2.42 3.63 2.42 5.82c-.01 4.54-3.7 8.24-8.24 8.24zm4.52-6.17c-.27-.13-1.62-.8-1.87-.89-.25-.09-.43-.13-.62.13-.19.26-.71.89-.87 1.08-.16.19-.32.21-.59.08-.27-.13-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.87-.16-.26-.02-.4.11-.53.11-.11.25-.29.37-.43.12-.14.16-.23.25-.39.09-.16.04-.3-.02-.43-.06-.13-.62-1.49-.85-2.04-.23-.55-.46-.48-.62-.49-.16-.01-.34-.01-.51-.01s-.43.06-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.76 2.68 4.27 3.75 2.51 1.06 2.51.71 2.96.68.45-.03 1.41-.58 1.61-1.14.2-.56.2-.9.14-1.04-.06-.14-.24-.22-.51-.35z"/>
+        </svg>
+    </a>
+    
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (hamburgerBtn && mobileMenu) {
+                hamburgerBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+            }
+
+            // KRONOS: Simulación de Eventos GA4 (Brief 7)
+            console.log('GA4 Event: blog_read_article (contabilidad-ordenada-auditoria...)');
+
+            const ctaSidebar = document.getElementById('blog-cta-sidebar');
+            const ctaBottom = document.getElementById('blog-cta-bottom');
+
+            if (ctaSidebar) {
+                ctaSidebar.addEventListener('click', () => {
+                    console.log('GA4 Event: contact_click (Desde Sidebar Blog Auditoría)');
+                });
+            }
+            if (ctaBottom) {
+                ctaBottom.addEventListener('click', () => {
+                    console.log('GA4 Event: contact_click (Desde CTA Final Artículo Auditoría)');
+                });
+            }
+        });
+    </script>    
+</body>
+</html>
+
